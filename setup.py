@@ -9,13 +9,13 @@ with codecs.open(os.path.join(parent_dir, 'README.md'), encoding='utf-8') as rea
 setup(
     name='cachspeak',
 
-    version='1.0.0dev0',
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
 
     description='Cachet to TeamSpeak integration bot',
     long_description=long_description,
 
-    # TODO: once repository is up uncomment
-    # url='https://github.com/enricoghdn/cachspeak',
+    url='https://github.com/enricoghdn/cachspeak',
 
     author='Enrico Ghidoni',
     author_email='enricoghdn@gmail.com',
