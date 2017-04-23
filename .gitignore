@@ -1,0 +1,8 @@
+env/
+*.egg*/
+__pycache__/
+run-cachspeak.sh
+cachspeak.ini
+persist_file.db
+.idea
+.DS_Store
