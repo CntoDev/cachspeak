@@ -9,7 +9,7 @@ with codecs.open(os.path.join(parent_dir, 'README.md'), encoding='utf-8') as rea
 setup(
     name='cachspeak',
 
-    version='0.1.0',
+    version='0.2.0',
 
     description='Cachet to TeamSpeak integration bot',
     long_description=long_description,
