@@ -3,6 +3,9 @@ This script is used to send a global message on a TeamSpeak server to notify a s
 
 ## Requirements
  - Python 3.5
+ 
+## Installation
+`pip install cachspeak`
 
 ## Usage
 Help message is available using `cachspeak -h` or `cachspeak --help`
