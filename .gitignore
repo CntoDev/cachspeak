@@ -8,6 +8,7 @@ run-cachspeak.sh
 *.db
 .coverage
 htmlcov/
+coverage.xml
 .cache/
 
 # System/IDE related files
