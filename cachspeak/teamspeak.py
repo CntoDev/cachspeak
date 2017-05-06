@@ -2,6 +2,7 @@ import logging
 
 import ts3
 
+
 def send_global_messages(messages, host, username, password):
     logging.info('sending %d global messages', len(messages))
     if not messages:

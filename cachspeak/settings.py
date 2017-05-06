@@ -1,13 +1,8 @@
-# -*- coding: utf-8 -*-
-
-"""INI settings wrapper module."""
-
 import configparser
 
 
-class TriscordConfigParser(configparser.ConfigParser):  # pylint: disable=R0901
+class CachspeakConfigParser(configparser.ConfigParser):  # pylint: disable=R0901
     """ConfigParser that requires a file to be loaded before use."""
-
     _loaded = False
 
     def get(self, *args, **kwargs):
@@ -19,6 +14,4 @@ class TriscordConfigParser(configparser.ConfigParser):  # pylint: disable=R0901
         self._loaded = True
         return super()._read(*args, **kwargs)
 
-config = TriscordConfigParser()
-
-#  vim: set tabstop=4 shiftwidth=4 expandtab autoindent :
+config = CachspeakConfigParser()

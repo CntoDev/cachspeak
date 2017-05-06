@@ -1,0 +1,87 @@
+{
+  "no_match_component": {
+    "id": 99,
+      "name": "Nonexistent component",
+      "description": "",
+      "link": "",
+      "status": 4,
+      "order": 7,
+      "group_id": 2,
+      "created_at": "2017-02-20 02:32:58",
+      "updated_at": "2017-03-15 20:27:09",
+      "deleted_at": null,
+      "enabled": true,
+      "status_name": "Major Outage",
+      "tags": {
+        "": ""
+      }
+  },
+  "single_match_component": {
+    "id": 6,
+      "name": "Development Server",
+      "description": "",
+      "link": "",
+      "status": 4,
+      "order": 7,
+      "group_id": 2,
+      "created_at": "2017-02-20 02:32:58",
+      "updated_at": "2017-03-15 20:27:09",
+      "deleted_at": null,
+      "enabled": true,
+      "status_name": "Major Outage",
+      "tags": {
+        "": ""
+      }
+  },
+  "double_match_component": {
+    "id": 3,
+    "name": "OCAP",
+    "description": "Self-hosted OCAP installation",
+    "link": "http://priv.carpenoctem.co/ocap/",
+    "status": 3,
+    "order": 6,
+    "group_id": 2,
+    "created_at": "2017-02-20 02:30:00",
+    "updated_at": "2017-04-09 23:02:04",
+    "deleted_at": null,
+    "enabled": true,
+    "status_name": "Partial Outage",
+    "tags": {
+      "": ""
+    }
+  },
+  "single_match_result": {
+    "id": 6,
+    "name": "Development Server",
+    "description": "",
+    "link": "",
+    "status": 1,
+    "order": 7,
+    "group_id": 2,
+    "created_at": "2017-02-20 02:32:58",
+    "updated_at": "2017-04-15 20:27:09",
+    "deleted_at": null,
+    "enabled": true,
+    "status_name": "Operational",
+    "tags": {
+      "": ""
+    }
+  },
+  "double_match_result": {
+    "id": 3,
+    "name": "OCAP",
+    "description": "Self-hosted OCAP installation",
+    "link": "http://priv.carpenoctem.co/ocap/",
+    "status": 3,
+    "order": 6,
+    "group_id": 2,
+    "created_at": "2017-02-20 02:30:00",
+    "updated_at": "2017-04-15 10:15:00",
+    "deleted_at": null,
+    "enabled": true,
+    "status_name": "Operational",
+    "tags": {
+      "": ""
+    }
+  }
+}
