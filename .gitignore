@@ -1,9 +1,15 @@
+# Project related files
 env/
 *.egg*/
 __pycache__/
 dist/
 run-cachspeak.sh
-cachspeak.ini
+/cachspeak.ini
 *.db
+.coverage
+htmlcov/
+.cache/
+
+# System/IDE related files
 .idea
 .DS_Store

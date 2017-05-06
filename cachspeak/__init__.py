@@ -1,10 +1,10 @@
 import argparse
 import logging
 
-from . import persistence
-from . import settings
-from . import teamspeak
-from . import cachet
+from cachspeak import persistence
+from cachspeak import settings
+from cachspeak import teamspeak
+from cachspeak import cachet
 
 parser = argparse.ArgumentParser(description="Send Cachet updates to TeamSpeak")
 parser.add_argument('--debug', action='store_true', help='enable logging')
@@ -45,10 +45,10 @@ def main(config_path, persist_path, debug=False):
         storage['last_status'] = cachet_client.components
 
 
-def cli_entry_point():
+def cli_entry_point(): # pragma: no cover
     args = parser.parse_args()
 
     main(**args.__dict__)
 
-if __name__ == '__main__':
+if __name__ == '__main__': # pragma: no cover
     cli_entry_point()
