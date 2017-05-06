@@ -9,13 +9,13 @@ with codecs.open(os.path.join(parent_dir, 'README.md'), encoding='utf-8') as rea
 setup(
     name='cachspeak',
 
-    version='0.3.0',
+    version='0.3.1',
 
     description='Cachet to TeamSpeak integration bot',
     long_description=long_description,
 
     url='https://github.com/enricoghdn/cachspeak',
-    download_url='https://github.com/enricoghdn/cachspeak/archive/0.3.0.tar.gz',
+    download_url='https://github.com/CntoDev/cachspeak/archive/0.3.1.tar.gz',
 
     author='Enrico Ghidoni',
     author_email='enricoghdn@gmail.com',
@@ -23,7 +23,7 @@ setup(
     license='BSD 3-Clause License',
 
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
 
         'Intended Audience :: System Administrators',
 
