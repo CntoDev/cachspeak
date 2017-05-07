@@ -8,7 +8,7 @@ Cachspeak is compatible with Cachet API v1 and TeamSpeak 3.
  - Python 3.5
  
 ## Installation
-`pip install cachspeak`
+`pip install .`
 
 ## Usage
 Help message is available using `cachspeak -h` or `cachspeak --help`

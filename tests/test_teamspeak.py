@@ -1,4 +1,3 @@
-import mock
 import pytest
 import pytest_mock
 
@@ -7,7 +6,7 @@ import ts3
 from cachspeak import teamspeak
 
 
-class TS3ConnectionMock(ts3.query.TS3Connection, mock.MagicMock):
+class TS3ConnectionMock(ts3.query.TS3Connection):
     """Mocks original class to prevent host/credentials check"""
 
     def __init__(self, host=None, port=10011):
@@ -35,7 +34,7 @@ def credentials():
 
 def test_teamspeak_send_with_messages(messages, credentials, mocker):
     mock_connection = mocker.patch('ts3.query.TS3Connection', new=TS3ConnectionMock)
-    mock_connection.gm = mock.Mock()
+    mock_connection.gm = mocker.Mock()
 
     teamspeak.send_global_messages(messages=messages, **credentials)
 
@@ -44,7 +43,7 @@ def test_teamspeak_send_with_messages(messages, credentials, mocker):
 
 def test_teamspeak_send_no_messages(credentials, mocker):
     mock_connection = mocker.patch('ts3.query.TS3Connection', new=TS3ConnectionMock)
-    mock_connection.gm = mock.Mock()
+    mock_connection.gm = mocker.Mock()
 
     teamspeak.send_global_messages(messages=[], **credentials)
 
