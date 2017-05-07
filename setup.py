@@ -9,13 +9,11 @@ with codecs.open(os.path.join(parent_dir, 'README.md'), encoding='utf-8') as rea
 setup(
     name='cachspeak',
 
-    version='0.3.1',
+    use_scm_version=True,
+    setup_requires=['setuptools_scm'],
 
     description='Cachet to TeamSpeak integration bot',
     long_description=long_description,
-
-    url='https://github.com/enricoghdn/cachspeak',
-    download_url='https://github.com/CntoDev/cachspeak/archive/0.3.1.tar.gz',
 
     author='Enrico Ghidoni',
     author_email='enricoghdn@gmail.com',
@@ -44,6 +42,15 @@ setup(
         'ts3==1.0.5',
         'python-cachetclient==0.2.3'
     ],
+
+    extras_require={
+        'test': [
+            'coverage>=4.3,<5',
+            'pytest>=3,<4',
+            'pytest-cov>=2.4,<3',
+            'pytest-mock>=1.6,<2'
+        ]
+    },
 
     entry_points={
         'console_scripts':[
