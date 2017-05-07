@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/CntoDev/cachspeak.svg?branch=master)](https://travis-ci.org/CntoDev/cachspeak)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f07dc8081354271a1db941ac20a8570)](https://www.codacy.com/app/enricoghdn/cachspeak_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CntoDev/cachspeak&amp;utm_campaign=Badge_Grade)
+
 # CNTO Cachet to TeamSpeak notification script
 This script is used to send a global message on a TeamSpeak server to notify a status change of one or more Cachet components.
 Cachspeak shares the same structure of [triscord](https://github.com/CntoDev/triscord), as well as the `persistence` and `settings` modules.
