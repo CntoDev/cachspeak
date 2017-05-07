@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.5"
+install:
+  - "pip install -e .[test]"
+  - "pip install codacy-coverage"
+script: "pytest --cov=cachspeak --cov=tests --cov-report=xml tests"
+after_script:
+  - "python-codacy-coverage -r coverage.xml"
+notifications:
+  email: false

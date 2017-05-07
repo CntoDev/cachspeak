@@ -43,7 +43,7 @@ setup(
         'python-cachetclient==0.2.3'
     ],
 
-    extras_requires={
+    extras_require={
         'test': [
             'coverage>=4.3,<5',
             'pytest>=3,<4',
