@@ -30,7 +30,7 @@ def test_main_no_updates(mocker, tmpdir_factory, saved_status_no_updates, cachet
     """Assert that no messages are sent if no components were updated"""
     mock_cachet = mocker.patch('cachetclient.cachet.Components.get')
     mock_ts3 = mocker.patch('ts3.query.TS3Connection', new=TS3ConnectionMock)
-    mock_ts3.gm = mocker.Mock()
+    mock_ts3.sendtextmessage = mocker.Mock()
 
     mock_cachet.return_value = cachet_response
     persist_file = create_test_persist_file(data=saved_status_no_updates, tmpdir_factory=tmpdir_factory)
@@ -39,14 +39,14 @@ def test_main_no_updates(mocker, tmpdir_factory, saved_status_no_updates, cachet
 
     cachspeak.main(config_path=config_path, persist_path=persist_file)
 
-    assert mock_ts3.gm.call_count == 0
+    assert mock_ts3.sendtextmessage.call_count == 0
 
 
 def test_main_with_updates(mocker, tmpdir_factory, saved_status_multi_updates, cachet_response):
     """Assert that messages are sent for proper updated components"""
     mock_cachet = mocker.patch('cachetclient.cachet.Components.get')
     mock_ts3 = mocker.patch('ts3.query.TS3Connection', new=TS3ConnectionMock)
-    mock_ts3.gm = mocker.Mock()
+    mock_ts3.sendtextmessage = mocker.Mock()
 
     mock_cachet.return_value = cachet_response
     persist_file = create_test_persist_file(data=saved_status_multi_updates, tmpdir_factory=tmpdir_factory)
@@ -55,4 +55,4 @@ def test_main_with_updates(mocker, tmpdir_factory, saved_status_multi_updates, c
 
     cachspeak.main(config_path=config_path, persist_path=persist_file, debug=True)
 
-    assert mock_ts3.gm.call_count == 3
+    assert mock_ts3.sendtextmessage.call_count == 3

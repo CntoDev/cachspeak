@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/CntoDev/cachspeak.svg?branch=master)](https://travis-ci.org/CntoDev/cachspeak)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f07dc8081354271a1db941ac20a8570)](https://www.codacy.com/app/enricoghdn/cachspeak_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CntoDev/cachspeak&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/8f07dc8081354271a1db941ac20a8570)](https://www.codacy.com/app/enricoghdn/cachspeak?utm_source=github.com&utm_medium=referral&utm_content=CntoDev/cachspeak&utm_campaign=Badge_Coverage)
 
 # CNTO Cachet to TeamSpeak notification script
 This script is used to send a global message on a TeamSpeak server to notify a status change of one or more Cachet components.
@@ -31,9 +32,11 @@ optional arguments:
 ```
 
 ## Configuration
-A configuration file following a ini-like syntax is required for connecting to Cachet and TeamSpeak services, an example is provided with the `cachspeak.ini.dist`file.
-
-The message sent to TeamSpeak can be customized with syntax highlighting (refer to TeamSpeak messaging documentation) and it is possible to show more information about every updated component: several placeholders are available, each one will be replaced with the actual component data. A placeholder must be enclosed by brackets in order to be used.
-The available placeholders are: `id`, `name`, `status`, `status_name`, `created_at`, `updated_at`, `deleted_at`.
+A configuration file following a ini-like syntax is required for connecting to Cachet and TeamSpeak services, an example is provided with the `cachspeak.ini.dist` file.
 
 **Note**: it is *highly* recommended that the machine running *cachspeak* is whitelisted on TeamSpeak server, otherwise a flood-ban is very likely to happen. Refer to ServerQuery documentation to add an address to the whitelist.
+
+### TeamSpeak notifications configuration
+ - The message sent to TeamSpeak can be customized with syntax highlighting (refer to TeamSpeak messaging documentation) and it is possible to show more information about every updated component: several placeholders are available, each one will be replaced with the actual component data. A placeholder must be enclosed by brackets in order to be used.The available placeholders are: `id`, `name`, `status`, `status_name`, `created_at`, `updated_at`, `deleted_at`.
+ - It is possible to specify the messages recipient (i.e. a single client, a whole channel, etc) by adjusting the `targetmode` and `target` options in the configuration file. Refer to ServerQuery documentation for details about values.
+ - The bot name (shown in blue at the beginning of each global message) can be customized by adjusting the value of `bot_nickname` in the configuration file.

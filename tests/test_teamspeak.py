@@ -21,6 +21,9 @@ class TS3ConnectionMock(ts3.query.TS3Connection):
     def login(self, *, client_login_name, client_login_password):
         pass
 
+    def clientupdate(self, **client_properties):
+        pass
+
 
 @pytest.fixture()
 def messages():
@@ -34,17 +37,17 @@ def credentials():
 
 def test_teamspeak_send_with_messages(messages, credentials, mocker):
     mock_connection = mocker.patch('ts3.query.TS3Connection', new=TS3ConnectionMock)
-    mock_connection.gm = mocker.Mock()
+    mock_connection.sendtextmessage = mocker.Mock()
 
     teamspeak.send_global_messages(messages=messages, **credentials)
 
-    assert mock_connection.gm.call_count == len(messages)
+    assert mock_connection.sendtextmessage.call_count == len(messages)
 
 
 def test_teamspeak_send_no_messages(credentials, mocker):
     mock_connection = mocker.patch('ts3.query.TS3Connection', new=TS3ConnectionMock)
-    mock_connection.gm = mocker.Mock()
+    mock_connection.sendtextmessage = mocker.Mock()
 
     teamspeak.send_global_messages(messages=[], **credentials)
 
-    assert mock_connection.gm.call_count == 0
+    assert mock_connection.sendtextmessage.call_count == 0

@@ -21,7 +21,7 @@ def main(config_path, persist_path, debug=False):
 
     settings.config.read(config_path)
 
-    cachet_client = cachet.CachetAPI(endpoint=settings.config.get('Cachet', 'api_endpoint'))
+    cachet_client = cachet.CachetAPI(endpoint=settings.config.get('Cachet', 'api_url'))
 
     with persistence.persistent_storage(persist_path) as storage:
         loaded_components = storage.get('last_status', [])
@@ -38,7 +38,10 @@ def main(config_path, persist_path, debug=False):
         messages=messages,
         host=settings.config.get('TeamSpeak', 'host'),
         username=settings.config.get('TeamSpeak', 'login_name'),
-        password=settings.config.get('TeamSpeak', 'login_password')
+        password=settings.config.get('TeamSpeak', 'login_password'),
+        bot_nickname=settings.config.get('TeamSpeak', 'bot_nickname'),
+        targetmode=settings.config.get('TeamSpeak', 'targetmode'),
+        target=settings.config.get('TeamSpeak', 'target')
     )
 
     with persistence.persistent_storage(persist_path) as storage:
