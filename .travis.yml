@@ -4,7 +4,7 @@ python:
 install:
   - "pip install -e .[test]"
   - "pip install codacy-coverage"
-script: "pytest --cov=cachspeak --cov=tests --cov-report=xml tests"
+script: "./run-tests.sh"
 after_script:
   - "python-codacy-coverage -r coverage.xml"
 notifications:
