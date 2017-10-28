@@ -39,8 +39,8 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
     install_requires=[
-        'ts3==1.0.5',
-        'python-cachetclient==0.2.3'
+        'ts3==1.0.6',
+        'python-cachetclient==0.2.4'
     ],
 
     extras_require={
