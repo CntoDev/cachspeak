@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/CntoDev/cachspeak.svg?branch=master)](https://travis-ci.org/CntoDev/cachspeak)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8f07dc8081354271a1db941ac20a8570)](https://www.codacy.com/app/enricoghdn/cachspeak_2?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CntoDev/cachspeak&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/8f07dc8081354271a1db941ac20a8570)](https://www.codacy.com/app/enricoghdn/cachspeak?utm_source=github.com&utm_medium=referral&utm_content=CntoDev/cachspeak&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bd2b276da5fa4c3dbff57a4c80089b60)](https://www.codacy.com/app/CNTODev/cachspeak?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CntoDev/cachspeak&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/bd2b276da5fa4c3dbff57a4c80089b60)](https://www.codacy.com/app/CNTODev/cachspeak?utm_source=github.com&utm_medium=referral&utm_content=CntoDev/cachspeak&utm_campaign=Badge_Coverage)
 [![Requirements Status](https://requires.io/github/CntoDev/cachspeak/requirements.svg?branch=master)](https://requires.io/github/CntoDev/cachspeak/requirements/?branch=master)
 
 # CNTO Cachet to TeamSpeak notification script
